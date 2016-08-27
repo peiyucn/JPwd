@@ -7,6 +7,10 @@ A JS password input components.
 
 [Click here to see the demo.](https://peiyucn.github.io/JPwd/src/sample.html)
 
+## Downloads
+[![JPwd.js](https://img.shields.io/badge/Download-JPwd.js-brightgreen.svg)](https://peiyucn.github.io/JPwd/src/JPwd.js)
+[![JPwd.min.js](https://img.shields.io/badge/Download-JPwd.min.js-brightgreen.svg)](https://peiyucn.github.io/JPwd/src/JPwd.min.js)
+
 ## Usage
 
     <script src="JPwd.min.js"></script>
