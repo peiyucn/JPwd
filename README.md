@@ -1,4 +1,4 @@
-## JPwd.js
+## JPwd.js [![build status][travis-image]][travis-url]
 A JS password input components.
 
 * No images, no external CSS
@@ -36,3 +36,6 @@ A JS password input components.
          */
         jpwd.init('pwdInputPlace', getPassword);
     </script>
+
+[travis-image]: https://travis-ci.org/peiyucn/JPwd.svg?branch=master
+[travis-url]: https://travis-ci.org/peiyucn/JPwd
