@@ -1,4 +1,4 @@
-## JPwd.js [![build status][travis-image]][travis-url]
+## JPwd.js  [![build status][travis-image]][travis-url]
 A JS password input components.
 
 * No images, no external CSS
