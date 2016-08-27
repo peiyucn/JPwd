@@ -9,6 +9,7 @@ A JS password input components.
 
 ## Downloads
 [![JPwd.js](https://img.shields.io/badge/Download-JPwd.js-brightgreen.svg)](https://peiyucn.github.io/JPwd/src/JPwd.js)
+
 [![JPwd.min.js](https://img.shields.io/badge/Download-JPwd.min.js-brightgreen.svg)](https://peiyucn.github.io/JPwd/src/JPwd.min.js)
 
 ## Usage
