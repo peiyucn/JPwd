@@ -1,5 +1,7 @@
 /**
  * Copyright (c) 2016 Pei Yu
+ * Licensed under the MIT license
+ * https://github.com/peiyucn/JPwd
  */
 ;(function (root, factory) {
     root.JPwd = factory();
@@ -18,13 +20,13 @@
     // Built-in defaultConfig
     var defaultConfig = {
         passwordMaxLength: 6,                // The number of password length
-        passwordSymbol: "●",                 // How to show password input
-        passwordSymbolColor: "#9b9b9b",
-        passwordSymbolSize: "1rem",
-        passwordSpanSideLength: "2rem",
-        passwordSpanBorderThin: "1px",
-        passwordSpanBorderColor: "#dbdbdb",
-        passwordSpanBorderStyle: "solid"
+        passwordSymbol: "●",                 // The password character
+        passwordSymbolColor: "#9b9b9b",      // The password character color
+        passwordSymbolSize: "1rem",          // The password character font size
+        passwordSpanSideLength: "2rem",      // The password input span side length
+        passwordSpanBorderThin: "1px",       // The password input span border thickness
+        passwordSpanBorderColor: "#dbdbdb",  // The password input span border color
+        passwordSpanBorderStyle: "solid"     // The password input span border style
     };
 
 
