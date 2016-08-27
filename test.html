@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1,minimum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="format-detection" content="telephone=no"/><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <title>TEST</title>
+
+    <!--<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>-->
+
+</head>
+<body style="width: 100%;padding: 0;margin: 0">
+<div style="position:absolute;z-index: 0;">
+    <input id="pwd" type="tel" value="" maxlength="4" oninput="showInput()">
+</div>
+<div style="width: 100%;text-align: center;margin-top: 20%">
+    <div id="pwdInput" style="display: inline-flex;z-index: 1" onclick="inputPwd()">
+    <span id="p1"
+          style="font-size: 1.5rem; width: 3rem;height: 3rem;border-top: 0.1rem solid #dbdbdb;border-bottom: 0.1rem  solid #dbdbdb;border-left: 0.1rem solid #dbdbdb;border-right:0.1rem solid #dbdbdb;text-align: center;line-height: 3.1rem"></span>
+        <span id="p2"
+              style="font-size: 1.5rem; width: 3rem;height: 3rem;border-top: 0.1rem solid #dbdbdb;border-bottom: 0.1rem  solid #dbdbdb;border-left: 0;border-right: 0.1rem solid #dbdbdb;text-align: center;line-height: 3.1rem"></span>
+        <span id="p3"
+              style="font-size: 1.5rem; width: 3rem;height: 3rem;border-top: 0.1rem solid #dbdbdb;border-bottom: 0.1rem  solid #dbdbdb;border-left: 0;border-right: 0.1rem solid #dbdbdb;text-align: center;line-height: 3.1rem"></span>
+        <span id="p4"
+              style="font-size: 1.5rem; width: 3rem;height: 3rem;border-top: 0.1rem solid #dbdbdb;border-bottom: 0.1rem  solid #dbdbdb;border-left: 0;border-right: 0.1rem solid #dbdbdb;text-align: center;line-height: 3.1rem"></span>
+    </div>
+    <div style="margin-top: 1rem">
+        <span id="pwdShow"></span>
+    </div>
+</div>
+<script>
+    document.getElementById("pwd").style.marginLeft =
+            -document.documentElement.clientHeight * 2 + "px";
+
+    function showInput() {
+        var maxLen = 4;
+        var iptLen = document.getElementById("pwd").value.length;
+        for (var i = 1; i < maxLen + 1; i++) {
+            var pwdSpanID = "p" + i;
+            if ((iptLen - i) >= 0) {
+                document.getElementById(pwdSpanID).innerHTML = "●";
+            } else {
+                document.getElementById(pwdSpanID).innerHTML = "";
+            }
+        }
+        document.getElementById("pwdShow").innerHTML = document.getElementById("pwd").value;
+    }
+
+    function inputPwd() {
+        document.getElementById("pwd").focus();
+    }
+</script>
+
+</body>
+</html>

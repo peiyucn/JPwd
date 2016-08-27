@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1,minimum-scale=1.0,user-scalable=no">
+    <title>JPwd Sample</title>
+    <style>
+        body {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .main {
+            margin: 0;
+            padding: 0;
+        }
+
+        .pwdInput {
+            text-align: center;
+            margin: 10rem 0 0 0;
+        }
+
+        .pwdShow {
+            text-align: center;
+            margin: 1rem 0 0 0;
+        }
+    </style>
+    <script src="JPwd.js"></script>
+</head>
+<body>
+<div class="main">
+    <div id="pwdInputPlace" class="pwdInput">
+        <!--JPwd will show in this place-->
+    </div>
+    <div class="pwdShow">
+        <span id="pwdShow"></span>
+    </div>
+</div>
+<!--script example-->
+<script src="JPwd.js"></script>
+<script>
+    function getPassword(result) {
+        document.getElementById("pwdShow").innerHTML = result;
+    }
+    var jpwd = new JPwd();
+    jpwd.init("pwdInputPlace", getPassword);
+</script>
+</body>
+</html>
