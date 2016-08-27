@@ -9,7 +9,7 @@ A JS password input components.
 
 ## Usage
 
-    <script src="JPwd.js"></script>
+    <script src="JPwd.min.js"></script>
     <script>
         /**
          * password input style custom config
