@@ -1,9 +1,13 @@
-# JPwd
-The JS password input components.
+# JPwd.js
+A JS password input components.
+
+* No images, no external CSS
+* No dependencies
+* Configurable
 
 [Click here to see the demo.](https://peiyucn.github.io/JPwd/src/sample.html)
 
-###How To Use
+#Usage
 
     <script src="JPwd.js"></script>
     <script>
