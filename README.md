@@ -13,8 +13,8 @@
         }
         var jpwd = new JPwd();
         /**
-         * pwdInputPlace is the html element id
+         * 'pwdInputPlace' is the html element id
          * which you want to show the JPwd input
          */
-        jpwd.init("pwdInputPlace", getPassword);
+        jpwd.init('pwdInputPlace', getPassword);
     </script>
