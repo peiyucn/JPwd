@@ -3,7 +3,7 @@ A JS password input components.
 
 * No images, no external CSS
 * No dependencies
-* Configurable
+* Simply Configurable
 
 [Click here to see the demo.](https://peiyucn.github.io/JPwd/src/sample.html)
 
@@ -22,6 +22,7 @@ A JS password input components.
          */
         var JPwdConfig = {
             passwordMaxLength: 6,                // The number of password length
+            passwordInvisible: true,             // The password whether to hide
             passwordSymbol: "●",                 // The password character
             passwordSymbolColor: "#9b9b9b",      // The password character color
             passwordSymbolSize: "1rem",          // The password character font size
@@ -34,7 +35,7 @@ A JS password input components.
         function getPassword(result) {
             console.log(result);
         }
-        var jpwd = new JPwd(JPwdConfig);
+        var jpwd = new JPwd(JPwdConfig);//or new JPwd(),it will use built-in config.
         /**
          * 'pwdInputPlace' is the html element id
          * which you want to show the JPwd input

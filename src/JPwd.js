@@ -20,6 +20,7 @@
     // Built-in defaultConfig
     var defaultConfig = {
         passwordMaxLength: 6,                // The number of password length
+        passwordInvisible: true,             // The password whether to hide
         passwordSymbol: "●",                 // The password character
         passwordSymbolColor: "#9b9b9b",      // The password character color
         passwordSymbolSize: "1rem",          // The password character font size
@@ -43,19 +44,20 @@
 
     function showInput(self, callback) {
         var maxLen = self.config.passwordMaxLength;
-        var iptLen = document.getElementById(self.privateSetting.realInputID).value.length;
+        var inputVal = document.getElementById(self.privateSetting.realInputID).value;
+        var iptLen = inputVal.length;
         for (var i = 1; i <= maxLen; i++) {
             var pwdSpanID = self.privateSetting.fakeInputSpanID + i;
             if ((iptLen - i) >= 0) {
-                document.getElementById(pwdSpanID).innerHTML = self.config.passwordSymbol;
+                document.getElementById(pwdSpanID).innerHTML = self.config.passwordInvisible ?
+                    self.config.passwordSymbol : inputVal.substr(i - 1, 1);
             } else {
                 document.getElementById(pwdSpanID).innerHTML = "";
             }
         }
 
         if (typeof callback == "function") {
-            var result = document.getElementById(self.privateSetting.realInputID).value;
-            callback(result);
+            callback(inputVal);
         }
     }
 
@@ -136,7 +138,7 @@
 
     merge(JPwd.prototype, {
         /**
-         *
+         * Init JPwd components
          * @param targetID
          * @param callback
          */
