@@ -49,13 +49,14 @@
         for (var i = 1; i <= maxLen; i++) {
             var pwdSpanID = self.privateSetting.fakeInputSpanID + i;
             if ((iptLen - i) >= 0) {
-                document.getElementById(pwdSpanID).innerHTML = self.config.passwordSymbol;
+                document.getElementById(pwdSpanID).innerHTML = self.config.passwordInvisible ?
+                    self.config.passwordSymbol : inputVal.substr(i - 1, 1);
             } else {
                 document.getElementById(pwdSpanID).innerHTML = "";
             }
         }
 
-        if (typeof callback == "function" && (maxLen == iptLen || iptLen == 0)) {
+        if (typeof callback == "function") {
             callback(inputVal);
         }
     }
