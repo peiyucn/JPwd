@@ -47,12 +47,12 @@
         var inputVal = document.getElementById(self.privateSetting.realInputID).value;
         var iptLen = inputVal.length;
         for (var i = 1; i <= maxLen; i++) {
-            var pwdSpanID = self.privateSetting.fakeInputSpanID + i;
-            if ((iptLen - i) >= 0) {
-                document.getElementById(pwdSpanID).innerHTML = self.config.passwordInvisible ?
-                    self.config.passwordSymbol : inputVal.substr(i - 1, 1);
+            var pwdSpan = document.getElementById(self.privateSetting.fakeInputSpanID + i);
+            if ((iptLen - i) < 0) {
+                pwdSpan.innerHTML = null;
             } else {
-                document.getElementById(pwdSpanID).innerHTML = "";
+                pwdSpan.innerHTML = self.config.passwordInvisible ?
+                    self.config.passwordSymbol : inputVal.substr(i - 1, 1);
             }
         }
 
