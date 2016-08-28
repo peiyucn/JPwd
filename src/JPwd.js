@@ -55,7 +55,7 @@
             }
         }
 
-        if (typeof callback == "function") {
+        if (typeof callback == "function" && (maxLen == iptLen || iptLen == 0)) {
             callback(inputVal);
         }
     }
