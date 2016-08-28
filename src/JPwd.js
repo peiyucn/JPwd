@@ -46,16 +46,20 @@
         var maxLen = self.config.passwordMaxLength;
         var inputVal = document.getElementById(self.privateSetting.realInputID).value;
         var iptLen = inputVal.length;
-        for (var i = 1; i <= maxLen; i++) {
-            var pwdSpan = document.getElementById(self.privateSetting.fakeInputSpanID + i);
-            if ((iptLen - i) < 0) {
-                pwdSpan.innerHTML = null;
-            } else {
-                pwdSpan.innerHTML = self.config.passwordInvisible ?
-                    self.config.passwordSymbol : inputVal.substr(i - 1, 1);
-            }
+
+        if (iptLen == self.preInputLen) {
+            return;
+        }
+        if (iptLen > self.preInputLen) {
+            document.getElementById(self.privateSetting.fakeInputSpanID + iptLen).innerHTML =
+                self.config.passwordInvisible ?
+                    self.config.passwordSymbol : inputVal.substr(iptLen - 1, 1);
+        }
+        if (iptLen < self.preInputLen) {
+            document.getElementById(self.privateSetting.fakeInputSpanID + self.preInputLen).innerHTML = null;
         }
 
+        self.preInputLen = iptLen;
         if (typeof callback == "function") {
             callback(inputVal);
         }
@@ -150,8 +154,10 @@
             if (typeof callback != "function") {
                 return;
             }
+            this.preInputLen = 0;
             target.appendChild(buildInput(this));
             buildEvent(this, callback);
+
         }
     });
 
