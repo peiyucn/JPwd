@@ -56,9 +56,9 @@
             }
         }
 
-        // if (typeof callback == "function") {
-        //     callback(inputVal);
-        // }
+        if (typeof callback == "function") {
+            callback(inputVal);
+        }
     }
 
     function clickToInput(self) {
