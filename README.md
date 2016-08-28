@@ -8,9 +8,9 @@ A JS password input components.
 [Click here to see the demo.](https://peiyucn.github.io/JPwd/src/sample.html)
 
 ## Downloads
-[![JPwd.js](https://img.shields.io/badge/Download-JPwd.js-brightgreen.svg)](https://peiyucn.github.io/JPwd/src/JPwd.js)
+[![JPwd.js][download-image]][download-url]
 
-[![JPwd.min.js](https://img.shields.io/badge/Download-JPwd.min.js-brightgreen.svg)](https://peiyucn.github.io/JPwd/src/JPwd.min.js)
+[![JPwd.min.js][download-min-image]][download-min-url]
 
 ## Usage
 
@@ -44,7 +44,11 @@ A JS password input components.
 
 [travis-image]: https://travis-ci.org/peiyucn/JPwd.svg?branch=master
 [travis-url]: https://travis-ci.org/peiyucn/JPwd
-[release-image]:https://img.shields.io/github/release/peiyucn/JPwd.svg
-[release-url]:https://github.com/peiyucn/JPwd/releases/
-[license-image]:https://img.shields.io/badge/license-MIT-blue.svg
-[license-url]:https://raw.githubusercontent.com/peiyucn/JPwd/master/LICENSE
+[release-image]: https://img.shields.io/github/release/peiyucn/JPwd.svg
+[release-url]: https://github.com/peiyucn/JPwd/releases/
+[license-image]: https://img.shields.io/badge/license-MIT-blue.svg
+[license-url]: https://raw.githubusercontent.com/peiyucn/JPwd/master/LICENSE
+[download-image]: https://img.shields.io/badge/Code-JPwd.js-brightgreen.svg
+[download-url]: https://peiyucn.github.io/JPwd/src/JPwd.js
+[download-min-image]: https://img.shields.io/badge/Code-JPwd.min.js-brightgreen.svg
+[download-min-url]: https://peiyucn.github.io/JPwd/src/JPwd.min.js
