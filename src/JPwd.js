@@ -43,7 +43,6 @@
     }
 
     function showInput(self, callback) {
-        var maxLen = self.config.passwordMaxLength;
         var inputVal = document.getElementById(self.privateSetting.realInputID).value;
         var iptLen = inputVal.length;
 
@@ -51,16 +50,16 @@
             return;
         }
         if (iptLen > self.preInputLen) {
-            document.getElementById(self.privateSetting.fakeInputSpanID + iptLen).innerHTML = "●";
+            document.getElementById(self.privateSetting.fakeInputSpanID + iptLen).innerHTML =
+                self.config.passwordInvisible ?
+                    self.config.passwordSymbol : inputVal.substr(iptLen - 1, 1);
         }
         if (iptLen < self.preInputLen) {
             document.getElementById(self.privateSetting.fakeInputSpanID + self.preInputLen).innerHTML = null;
         }
 
         self.preInputLen = iptLen;
-        if (typeof callback == "function") {
-            callback(inputVal);
-        }
+        //callback(inputVal);
     }
 
     function clickToInput(self) {

@@ -48,7 +48,7 @@
      */
     var JPwdConfig = {
         passwordMaxLength: 6,                // The number of password length
-        passwordInvisible: true,             // The password whether to hide
+        passwordInvisible: false,             // The password whether to hide
         passwordSymbol: "●",                 // The password character
         passwordSymbolColor: "#9b9b9b",      // The password character color
         passwordSymbolSize: "1rem",          // The password character font size
@@ -60,7 +60,7 @@
 
     /** callback function */
     function getPassword(result) {
-        document.getElementById("pwdShow").innerHTML = result;
+        //document.getElementById("pwdShow").innerHTML = result;
     }
     var jpwd = new JPwd(JPwdConfig);// or new JPwd(), to use built-in config.
     /**
