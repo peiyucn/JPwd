@@ -59,7 +59,7 @@
         }
 
         self.preInputLen = iptLen;
-        //callback(inputVal);
+        callback(inputVal);
     }
 
     function clickToInput(self) {
@@ -129,7 +129,7 @@
 
     function buildEvent(self, callback) {
         document.getElementById(self.privateSetting.realInputID).addEventListener(
-            'input', function () {
+            'keyup', function () {
                 showInput(self, callback)
             }, false);
         document.getElementById(self.privateSetting.fakeInputDivID).addEventListener(
