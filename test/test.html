@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1,minimum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="format-detection" content="telephone=no"/><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <title>TEST</title>
+
+    <!--<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>-->
+
+</head>
+<body>
+<div style="position:absolute;display: inline-flex;z-index: 0;">
+    <input id="pwd" type="tel" value="" style="margin: -1000px" maxlength="4" oninput="showInput()">
+</div>
+<div id="pwdInput" style="position:absolute;display: inline-flex;z-index: 1" onclick="inputPwd()">
+    <span id="p1"
+          style="width: 3rem;height: 3rem;border: 0.1rem solid #6b6e75;text-align: center;line-height: 3rem"></span>
+    <span id="p2"
+          style="width: 3rem;height: 3rem;border: 0.1rem solid #6b6e75;text-align: center;line-height: 3rem"></span>
+    <span id="p3"
+          style="width: 3rem;height: 3rem;border: 0.1rem solid #6b6e75;text-align: center;line-height: 3rem"></span>
+    <span id="p4"
+          style="width: 3rem;height: 3rem;border: 0.1rem solid #6b6e75;text-align: center;line-height: 3rem"></span>
+</div>
+<div>
+    <span id="pwdShow"></span>
+</div>
+
+<script>
+    function showInput() {
+        var maxLen = 4;
+        var iptLen = document.getElementById("pwd").value.length;
+        for (var i = 1; i < maxLen + 1; i++) {
+            var pwdSpanID = "p" + i;
+            if ((iptLen - i) >= 0) {
+                document.getElementById(pwdSpanID).innerHTML = "●";
+            } else {
+                document.getElementById(pwdSpanID).innerHTML = "";
+            }
+        }
+        if (iptLen >= 4) {
+            document.getElementById("pwdShow").innerHTML = document.getElementById("pwd").value;
+        }
+    }
+
+    function inputPwd() {
+        document.getElementById("pwd").focus();
+    }
+</script>
+
+</body>
+</html>
