@@ -129,7 +129,7 @@
 
     function buildEvent(self, callback) {
         document.getElementById(self.privateSetting.realInputID).addEventListener(
-            'keyup', function () {
+            'input', function () {
                 showInput(self, callback)
             }, false);
         document.getElementById(self.privateSetting.fakeInputDivID).addEventListener(
