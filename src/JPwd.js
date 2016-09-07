@@ -51,9 +51,7 @@
             return;
         }
         if (iptLen > self.preInputLen) {
-            document.getElementById(self.privateSetting.fakeInputSpanID + iptLen).innerHTML =
-                self.config.passwordInvisible ?
-                    self.config.passwordSymbol : inputVal.substr(iptLen - 1, 1);
+            document.getElementById(self.privateSetting.fakeInputSpanID + iptLen).innerHTML = "●";
         }
         if (iptLen < self.preInputLen) {
             document.getElementById(self.privateSetting.fakeInputSpanID + self.preInputLen).innerHTML = null;
@@ -101,7 +99,7 @@
         // Show password fake input instead of spans
         var i;
         for (i = 1; i <= self.config.passwordMaxLength; i++) {
-            var fakeInputSpan = document.createElement("div");
+            var fakeInputSpan = document.createElement("span");
             fakeInputSpan.id = self.privateSetting.fakeInputSpanID + i;
             fakeInputSpan.style.textAlign = "center";
             fakeInputSpan.style.width = self.config.passwordSpanSideLength;
