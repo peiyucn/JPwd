@@ -77,6 +77,7 @@
 
         // The whole JPwd area
         inputArea = document.createElement("div");
+        inputArea.id = self.privateSetting.placeHolderID;
 
         // The real password input div
         var realInputArea = document.createElement("div");
@@ -100,7 +101,7 @@
         // Show password fake input instead of spans
         var i;
         for (i = 1; i <= self.config.passwordMaxLength; i++) {
-            var fakeInputSpan = document.createElement("span");
+            var fakeInputSpan = document.createElement("div");
             fakeInputSpan.id = self.privateSetting.fakeInputSpanID + i;
             fakeInputSpan.style.textAlign = "center";
             fakeInputSpan.style.width = self.config.passwordSpanSideLength;
