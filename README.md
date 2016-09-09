@@ -14,38 +14,37 @@ A JS password input components.
 
 ## Usage
 
-    <script src="JPwd.min.js"></script>
-    <script>
-        /**
-         * password input style custom config
-         * if there is no custom config JPwd will be use built-in config
-         */
-        var JPwdConfig = {
-            // Built-in defaultConfig, you can change it.
-            passwordMaxLength: 6,                   // The number of password length
-            passwordInvisible: true,                // The password whether to hide
-            passwordSymbol: "●",                    // The password character
-            passwordSymbolColor: "#9b9b9b",         // The password character color
-            passwordSymbolSize: "1rem",             // The password character font size
-            passwordSpanSideLength: "2.5rem",       // The password input span side length
-            passwordSpanBorderThin: "1px",          // The password input span border thickness
-            passwordSpanBorderColor: "#dbdbdb",     // The password input span border color
-            passwordSpanBorderStyle: "solid",       // The password input span border style
-            passwordInputBorderRadius: "4px",       // The password input span border radius
-            passwordInputBoxShadow: "10px",         // The password input box shadow thickness
-            passwordInputBoxShadowColor: "#72d1ff"  // The password input box shadow color
-        };
-        /** callback function */
-        function getPassword(result) {
-            console.log(result);
-        }
-        var jpwd = new JPwd(JPwdConfig);//or new JPwd(),it will use built-in config.
-        /**
-         * 'pwdInputPlace' is the html element id
-         * which you want to show the JPwd input
-         */
-        jpwd.init('pwdInputPlace', getPassword);
-    </script>
+```javascript
+ /**
+  * password input style custom config
+  * if there is no custom config JPwd will be use built-in config
+  */
+ var JPwdConfig = {
+     // Built-in defaultConfig, you can change it.
+     passwordMaxLength: 6,                   // The number of password length
+     passwordInvisible: true,                // The password whether to hide
+     passwordSymbol: "●",                    // The password character
+     passwordSymbolColor: "#9b9b9b",         // The password character color
+     passwordSymbolSize: "1rem",             // The password character font size
+     passwordSpanSideLength: "2.5rem",       // The password input span side length
+     passwordSpanBorderThin: "1px",          // The password input span border thickness
+     passwordSpanBorderColor: "#dbdbdb",     // The password input span border color
+     passwordSpanBorderStyle: "solid",       // The password input span border style
+     passwordInputBorderRadius: "4px",       // The password input span border radius
+     passwordInputBoxShadow: "10px",         // The password input box shadow thickness
+     passwordInputBoxShadowColor: "#72d1ff"  // The password input box shadow color
+ };
+ /** callback function */
+ function getPassword(result) {
+     console.log(result);
+ }
+ var jpwd = new JPwd(JPwdConfig);//or new JPwd(),it will use built-in config.
+ /**
+  * 'pwdInputPlace' is the html element id
+  * which you want to show the JPwd input
+  */
+ jpwd.init('pwdInputPlace', getPassword);
+```
 
 [travis-image]: https://travis-ci.org/peiyucn/JPwd.svg?branch=master
 [travis-url]: https://travis-ci.org/peiyucn/JPwd
