@@ -19,15 +19,18 @@
 
     // Built-in defaultConfig
     var defaultConfig = {
-        passwordMaxLength: 6,                // The number of password length
-        passwordInvisible: true,             // The password whether to hide
-        passwordSymbol: "●",                 // The password character
-        passwordSymbolColor: "#9b9b9b",      // The password character color
-        passwordSymbolSize: "1rem",          // The password character font size
-        passwordSpanSideLength: "2rem",      // The password input span side length
-        passwordSpanBorderThin: "1px",       // The password input span border thickness
-        passwordSpanBorderColor: "#dbdbdb",  // The password input span border color
-        passwordSpanBorderStyle: "solid"     // The password input span border style
+        passwordMaxLength: 6,                   // The number of password length
+        passwordInvisible: true,                // The password whether to hide
+        passwordSymbol: "●",                    // The password character
+        passwordSymbolColor: "#9b9b9b",         // The password character color
+        passwordSymbolSize: "1rem",             // The password character font size
+        passwordSpanSideLength: "2rem",         // The password input span side length
+        passwordSpanBorderThin: "1px",          // The password input span border thickness
+        passwordSpanBorderColor: "#dbdbdb",     // The password input span border color
+        passwordSpanBorderStyle: "solid",       // The password input span border style
+        passwordInputBorderRadius: "4px",       // The password input span border radius
+        passwordInputBoxShadow: "10px",         // The password input box shadow thickness
+        passwordInputBoxShadowColor: "#72d1ff"  // The password input box shadow color
     };
 
 
@@ -94,6 +97,11 @@
         fakeInputArea.id = self.privateSetting.fakeInputDivID;
         fakeInputArea.style.display = "inline-flex";
         fakeInputArea.style.zIndex = "1";
+        fakeInputArea.style.borderRadius = self.config.passwordInputBorderRadius;
+        fakeInputArea.style.webkitBoxShadow = "0 0 " +
+            self.config.passwordInputBoxShadow + self.config.passwordInputBoxShadowColor;
+        fakeInputArea.style.mozBoxShadow = "0 0 " +
+            self.config.passwordInputBoxShadow + self.config.passwordInputBoxShadowColor;
 
         // Show password fake input instead of spans
         var i;
@@ -111,11 +119,18 @@
             fakeInputSpan.style.borderLeftWidth = self.config.passwordSpanBorderThin;
             fakeInputSpan.style.borderTopWidth = self.config.passwordSpanBorderThin;
             fakeInputSpan.style.borderBottomWidth = self.config.passwordSpanBorderThin;
+            if (i == 1) {
+                fakeInputSpan.style.borderTopLeftRadius = self.config.passwordInputBorderRadius;
+                fakeInputSpan.style.borderBottomLeftRadius = self.config.passwordInputBorderRadius;
+            }
             if (i == self.config.passwordMaxLength) {
                 fakeInputSpan.style.borderRightWidth = self.config.passwordSpanBorderThin;
+                fakeInputSpan.style.borderTopRightRadius = self.config.passwordInputBorderRadius;
+                fakeInputSpan.style.borderBottomRightRadius = self.config.passwordInputBorderRadius;
             } else {
                 fakeInputSpan.style.borderRightWidth = 0;
             }
+
 
             fakeInputArea.appendChild(fakeInputSpan);
         }
