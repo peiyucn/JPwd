@@ -21,7 +21,7 @@ A JS password input components.
          * if there is no custom config JPwd will be use built-in config
          */
         var JPwdConfig = {
-            // Built-in defaultConfig
+            // Built-in defaultConfig, you can change it.
             passwordMaxLength: 6,                   // The number of password length
             passwordInvisible: true,                // The password whether to hide
             passwordSymbol: "●",                    // The password character
