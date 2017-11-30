@@ -1,4 +1,7 @@
-## JPwd.js  [![build status][travis-image]][travis-url] [![GitHub release][release-image]][release-url] [![GitHub license][license-image]][license-url]
+# JPwd.js
+
+ [![build status][travis-image]][travis-url] [![GitHub release][release-image]][release-url] [![GitHub license][license-image]][license-url]
+
 A JS password input components.
 
 * No images, no external CSS
