@@ -17,6 +17,7 @@ A JS password input components.
 
 ## Usage
 
+```javascript
     <script src="JPwd.min.js"></script>
     <script>
         /**
@@ -49,6 +50,7 @@ A JS password input components.
          */
         jpwd.init('pwdInputPlace', getPassword);
     </script>
+```
 
 [travis-image]: https://travis-ci.org/peiyucn/JPwd.svg?branch=master
 [travis-url]: https://travis-ci.org/peiyucn/JPwd
