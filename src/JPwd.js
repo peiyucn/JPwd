@@ -97,6 +97,9 @@
         fakeInputArea.id = self.privateSetting.fakeInputDivID;
         fakeInputArea.style.display = "inline-flex";
         fakeInputArea.style.zIndex = "1";
+        fakeInputArea.style.borderWidth = self.config.passwordSpanBorderThin;
+        fakeInputArea.style.borderStyle = self.config.passwordSpanBorderStyle;
+        fakeInputArea.style.borderColor = self.config.passwordInputBoxShadowColor;
         fakeInputArea.style.borderRadius = self.config.passwordInputBorderRadius;
         fakeInputArea.style.webkitBoxShadow = "0 0 " +
             self.config.passwordInputBoxShadow + self.config.passwordInputBoxShadowColor;
@@ -116,19 +119,15 @@
             fakeInputSpan.style.lineHeight = self.config.passwordSpanSideLength;
             fakeInputSpan.style.fontSize = self.config.passwordSymbolSize;
             fakeInputSpan.style.color = self.config.passwordSymbolColor;
-            fakeInputSpan.style.borderLeftWidth = self.config.passwordSpanBorderThin;
-            fakeInputSpan.style.borderTopWidth = self.config.passwordSpanBorderThin;
-            fakeInputSpan.style.borderBottomWidth = self.config.passwordSpanBorderThin;
-            if (i == 1) {
-                fakeInputSpan.style.borderTopLeftRadius = self.config.passwordInputBorderRadius;
-                fakeInputSpan.style.borderBottomLeftRadius = self.config.passwordInputBorderRadius;
-            }
+            fakeInputSpan.style.borderLeftWidth = 0;
+            fakeInputSpan.style.borderTopWidth = 0;
+            fakeInputSpan.style.borderBottomWidth = 0;
             if (i == self.config.passwordMaxLength) {
-                fakeInputSpan.style.borderRightWidth = self.config.passwordSpanBorderThin;
+                fakeInputSpan.style.borderRightWidth = 0;
                 fakeInputSpan.style.borderTopRightRadius = self.config.passwordInputBorderRadius;
                 fakeInputSpan.style.borderBottomRightRadius = self.config.passwordInputBorderRadius;
             } else {
-                fakeInputSpan.style.borderRightWidth = 0;
+                fakeInputSpan.style.borderRightWidth = self.config.passwordSpanBorderThin;
             }
 
 
