@@ -1,6 +1,9 @@
 # JPwd.js
 
- [![build status][travis-image]][travis-url] [![GitHub release][release-image]][release-url] [![GitHub license][license-image]][license-url]
+ [![build status][travis-image]][travis-url]
+ [![GitHub release][release-image]][release-url]
+ [![GitHub license][license-image]][license-url]
+ [![996.icu][996.icu-image]][996.icu-url]
 
 A JS password input components.
 
@@ -11,6 +14,7 @@ A JS password input components.
 [Click here to see the demo.](https://peiyucn.github.io/JPwd/src/sample.html)
 
 ## Downloads
+
 [![JPwd.js][download-image]][download-url]
 
 [![JPwd.min.js][download-min-image]][download-min-url]
@@ -58,6 +62,8 @@ A JS password input components.
 [release-url]: https://github.com/peiyucn/JPwd/releases/
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-url]: https://raw.githubusercontent.com/peiyucn/JPwd/master/LICENSE
+[996.icu-image]: https://img.shields.io/badge/link-996.icu-red.svg
+[996.icu-url]: https://996.icu
 [download-image]: https://img.shields.io/badge/Code-JPwd.js-brightgreen.svg
 [download-url]: https://peiyucn.github.io/JPwd/src/JPwd.js
 [download-min-image]: https://img.shields.io/badge/Code-JPwd.min.js-brightgreen.svg
